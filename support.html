@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>しのばせトーク - サポート</title>
+<style>
+  :root {
+    --bg: #28060a;
+    --bg-elevated: #3a0f14;
+    --accent: #9e1b32;
+    --gold: #c9a227;
+    --text: #f1e6d2;
+    --text-muted: #c9bba4;
+    --border: #5a2a28;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
+    line-height: 1.8;
+  }
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+  }
+  h1 {
+    font-family: "Hiragino Mincho ProN", "Yu Mincho", serif;
+    color: var(--gold);
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+  .tagline {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 14px;
+    margin-bottom: 48px;
+  }
+  h2 {
+    font-family: "Hiragino Mincho ProN", "Yu Mincho", serif;
+    color: var(--gold);
+    font-size: 20px;
+    border-left: 4px solid var(--accent);
+    padding-left: 12px;
+    margin-top: 48px;
+  }
+  .card {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+  }
+  .contact-email {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 12px 24px;
+    background: var(--accent);
+    border: 1px solid var(--gold);
+    border-radius: 8px;
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .contact-email:hover { opacity: 0.85; }
+  .faq-item {
+    margin-bottom: 24px;
+  }
+  .faq-q {
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .faq-q::before {
+    content: "Q. ";
+    color: var(--gold);
+  }
+  .faq-a {
+    color: var(--text-muted);
+    margin: 0;
+  }
+  .faq-a::before {
+    content: "A. ";
+    color: var(--accent);
+    font-weight: 600;
+  }
+  footer {
+    margin-top: 64px;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 12px;
+  }
+  a { color: var(--gold); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>しのばせトーク</h1>
+    <p class="tagline">お題をこっそり忍ばせるトークゲーム - サポート</p>
+
+    <section class="card">
+      <h2 style="margin-top:0">お問い合わせ</h2>
+      <p>アプリの不具合報告・ご意見・ご要望などは、以下のメールアドレスまでご連絡ください。</p>
+      <a class="contact-email" href="mailto:tkcworks01@gmail.com">tkcworks01@gmail.com</a>
+    </section>
+
+    <h2>よくあるご質問</h2>
+
+    <div class="faq-item">
+      <p class="faq-q">アプリが正常に動作しない・フリーズする</p>
+      <p class="faq-a">お手数ですが、アプリの再起動、端末の再起動、OSを最新バージョンに更新のうえ再度お試しください。改善しない場合は、機種名・OSバージョンを添えて上記メールアドレスまでご連絡ください。</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-q">追加登録したお題ワードが消えてしまった</p>
+      <p class="faq-a">登録したお題ワードは端末内にのみ保存されます。アプリの削除・再インストールや、端末のデータ消去を行うと、登録内容も失われますのでご注意ください。</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-q">対応している端末・OSのバージョンは?</p>
+      <p class="faq-a">iOS 16.4以降、Android 7.0以降でご利用いただけます。</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="faq-q">要望・不具合報告はどこにすればいい?</p>
+      <p class="faq-a">上記のメールアドレスまでお気軽にご連絡ください。内容を確認のうえ、今後のアップデートの参考にさせていただきます。</p>
+    </div>
+
+    <footer>
+      &copy; 2026 しのばせトーク
+    </footer>
+  </div>
+</body>
+</html>
