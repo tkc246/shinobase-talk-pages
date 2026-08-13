@@ -97,10 +97,22 @@
     font-size: 12px;
   }
   a { color: var(--gold); }
+  .home-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 28px;
+    color: var(--text-muted);
+    font-size: 13px;
+    text-decoration: none;
+  }
+  .home-link svg { width: 14px; height: 14px; }
+  .home-link:hover { color: var(--gold); text-decoration: underline; }
 </style>
 </head>
 <body>
   <div class="wrap">
+    <a class="home-link" href="https://tkc-works.net/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>tkc-works</a>
     <h1>しのばせトーク</h1>
     <p class="tagline">お題をこっそり忍ばせるトークゲーム - サポート</p>
 
