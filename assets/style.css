@@ -1,0 +1,311 @@
+/* しのばせトーク 案内ページ共通スタイル(アプリ 1.1「月影」デザインに準拠) */
+:root {
+  --bg: #0d0b0c;
+  --surface: #161213;
+  --surface-2: #1d1817;
+  --line: rgba(237, 228, 211, 0.12);
+  --line-strong: rgba(237, 228, 211, 0.22);
+  --text: #ede4d3;
+  --text-strong: #f5eedf;
+  --text-sub: #c9bba4;
+  --text-muted: #8c8273;
+  --vermilion: #c23a26;
+  --vermilion-bright: #d9432e;
+  --gold: #c9a227;
+  --moon: #e4dac6;
+  --mincho: "Shippori Mincho B1", "Hiragino Mincho ProN", "Yu Mincho", serif;
+  --gothic: "Zen Kaku Gothic New", "Hiragino Sans", "Yu Gothic", sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text-sub);
+  font-family: var(--gothic);
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.95;
+  letter-spacing: 0.02em;
+}
+
+a { color: var(--gold); text-underline-offset: 3px; }
+a:hover { color: #e0bd45; }
+strong { color: var(--text); font-weight: 700; }
+
+/* ---------- 夜空のヘッダー ---------- */
+.sky {
+  position: relative;
+  overflow: hidden;
+  padding: 28px 20px 0;
+  background:
+    radial-gradient(ellipse 60% 70% at 88% 18%, rgba(237, 228, 211, 0.12), transparent 70%),
+    linear-gradient(180deg, #171211 0%, var(--bg) 100%);
+}
+.sky-inner { position: relative; max-width: 720px; margin: 0 auto; }
+
+.moon {
+  position: absolute;
+  top: 34px;
+  right: -36px;
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 36% 32%, var(--moon) 55%, #b9ac93 100%);
+  box-shadow: 0 0 80px rgba(237, 228, 211, 0.18);
+  pointer-events: none;
+}
+.moon::before, .moon::after {
+  /* 月にかかる横長の雲(アプリのホーム画面と同じ意匠) */
+  content: "";
+  position: absolute;
+  height: 14px;
+  border-radius: 7px;
+  background: #1d1817;
+}
+.moon::before { left: -40px; top: 92px; width: 170px; }
+.moon::after { left: 60px; top: 122px; width: 200px; height: 10px; }
+
+.home-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-muted);
+  font-size: 13px;
+  text-decoration: none;
+  letter-spacing: 0.06em;
+}
+.home-link svg { width: 14px; height: 14px; }
+.home-link:hover { color: var(--gold); }
+
+.hero { position: relative; padding: 56px 0 44px; }
+.app {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--text);
+  font-family: var(--mincho);
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: 0.12em;
+}
+.app img { width: 52px; height: 52px; border-radius: 12px; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5); }
+
+.kicker {
+  margin: 30px 0 4px;
+  color: var(--vermilion-bright);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+}
+h1 {
+  margin: 0;
+  color: var(--text-strong);
+  font-family: var(--mincho);
+  font-weight: 800;
+  font-size: clamp(30px, 7.4vw, 40px);
+  line-height: 1.35;
+  letter-spacing: 0.08em;
+  text-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+}
+.lead { margin: 14px 0 0; max-width: 30em; color: var(--text-sub); font-size: 14px; }
+
+/* 屋根並みと地面 */
+.roofs { position: relative; display: block; width: 100%; height: 64px; margin-top: 8px; }
+
+/* ---------- 本文 ---------- */
+main { max-width: 720px; margin: 0 auto; padding: 8px 20px 40px; }
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+  margin: 0 0 28px;
+  color: var(--text-muted);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+}
+
+section { margin-top: 44px; }
+
+h2 {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin: 0 0 14px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+  color: var(--text-strong);
+  font-family: var(--mincho);
+  font-weight: 800;
+  font-size: 21px;
+  letter-spacing: 0.08em;
+  line-height: 1.5;
+}
+h2 .num {
+  flex: none;
+  color: var(--vermilion-bright);
+  font-size: 14px;
+  letter-spacing: 0.1em;
+}
+h3 { margin: 22px 0 6px; color: var(--text); font-size: 15px; font-weight: 700; }
+
+p { margin: 0 0 12px; }
+ul { margin: 0 0 12px; padding-left: 1.3em; }
+li { margin-bottom: 8px; }
+li::marker { color: var(--vermilion); }
+
+.card {
+  margin-top: 14px;
+  padding: 20px 22px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--surface);
+}
+.card > :last-child { margin-bottom: 0; }
+
+.note {
+  margin-top: 14px;
+  padding: 14px 18px;
+  border-left: 3px solid var(--gold);
+  background: rgba(201, 162, 39, 0.06);
+  color: var(--text-sub);
+  font-size: 14px;
+}
+.note > :last-child { margin-bottom: 0; }
+
+/* 表(取得する情報の一覧) */
+.table-wrap { overflow-x: auto; margin-top: 14px; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th, td { padding: 12px 10px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+th { color: var(--text-muted); font-size: 12px; font-weight: 700; letter-spacing: 0.12em; white-space: nowrap; }
+td:first-child { color: var(--text); font-weight: 700; white-space: nowrap; }
+
+/* 特典の一覧 */
+.perks { display: grid; gap: 10px; margin: 14px 0 0; padding: 0; list-style: none; }
+.perks li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+  padding: 12px 16px;
+  border-radius: 4px;
+  background: var(--surface-2);
+  color: var(--text);
+  font-weight: 700;
+}
+.perks li::before { content: "◆"; color: var(--gold); font-size: 10px; }
+
+/* 主ボタン(朱) */
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 6px;
+  padding: 14px 26px;
+  border-radius: 4px;
+  background: var(--vermilion);
+  color: #f7efe2;
+  font-family: var(--mincho);
+  font-weight: 800;
+  font-size: 17px;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgba(194, 58, 38, 0.25);
+}
+.button svg { width: 18px; height: 18px; }
+.button:hover { color: #fff; background: var(--vermilion-bright); }
+
+/* よくある質問(開閉) */
+.faq { margin-top: 14px; border-top: 1px solid var(--line); }
+.faq details { border-bottom: 1px solid var(--line); }
+.faq summary {
+  position: relative;
+  display: flex;
+  gap: 12px;
+  padding: 16px 34px 16px 0;
+  color: var(--text);
+  font-weight: 700;
+  cursor: pointer;
+  list-style: none;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::before { content: "問"; flex: none; color: var(--gold); font-family: var(--mincho); font-weight: 800; }
+.faq summary::after {
+  content: "";
+  position: absolute;
+  right: 6px;
+  top: 24px;
+  width: 9px;
+  height: 9px;
+  border-right: 1.5px solid var(--text-muted);
+  border-bottom: 1.5px solid var(--text-muted);
+  transform: rotate(45deg);
+  transition: transform 0.2s;
+}
+.faq details[open] summary::after { transform: rotate(-135deg); top: 28px; }
+.faq .answer { display: flex; gap: 12px; padding: 0 0 18px; }
+.faq .answer::before { content: "答"; flex: none; color: var(--vermilion-bright); font-family: var(--mincho); font-weight: 800; }
+.faq .answer > div > :last-child { margin-bottom: 0; }
+
+/* 関連リンク */
+.links { display: grid; gap: 10px; margin-top: 14px; }
+.links a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border: 1px solid var(--line-strong);
+  border-radius: 4px;
+  color: var(--text);
+  font-weight: 700;
+  text-decoration: none;
+}
+.links a:hover { border-color: var(--gold); color: var(--gold); }
+.links a span { color: var(--text-muted); font-weight: 500; font-size: 13px; }
+
+/* 判子 */
+.seal {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border: 2px solid var(--vermilion-bright);
+  border-radius: 4px;
+  color: var(--vermilion-bright);
+  font-family: var(--mincho);
+  font-weight: 800;
+  font-size: 22px;
+  transform: rotate(-6deg);
+}
+
+footer {
+  max-width: 720px;
+  margin: 24px auto 0;
+  padding: 28px 20px 48px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--text-muted);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+}
+
+@media (max-width: 480px) {
+  .moon { width: 150px; height: 150px; right: -40px; top: 40px; }
+  .moon::before { top: 64px; width: 130px; }
+  .moon::after { top: 86px; width: 150px; }
+  .hero { padding-top: 44px; }
+  /* 狭い画面では表を縦積みにして、項目名を見出しのように置く */
+  table, tbody, tr, td { display: block; }
+  thead { display: none; }
+  tr { padding: 14px 0; border-bottom: 1px solid var(--line); }
+  td { padding: 0; border: 0; }
+  td:first-child { margin-bottom: 4px; white-space: normal; }
+}
